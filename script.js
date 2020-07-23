@@ -1,3 +1,5 @@
+// Arrays containing all the possible character types //
+
 var lowerCase = [
   "a",
   "b",
@@ -86,12 +88,14 @@ var specialChar = [
   "~",
 ];
 
+//Prompts
+
 function name() {
   var length = parseInt(
     prompt("How many characters shall this dumb password be?")
   );
   if (isNaN(length) === true) {
-    alert("Please provide the password length as a number. Jerk.");
+    alert("Please provide the password length as a number. Be Kind.");
     return;
   }
   if (length < 8) {
@@ -102,8 +106,22 @@ function name() {
     alert("Please enter a length less than 128 characters.");
     return;
   }
-  var hasUpperCase = confirm("Click OK to cofirm including uppercase letters.");
-  // Create var = for other cases//
+
+  //Prompts to choose what character types are to be used in password generation//
+
+  var hasUpperCase = confirm(
+    "Click OK to confirm including uppercase letters."
+  );
+
+  var hasLowerCase = confirm(
+    "Click OK to confirm including lowercase letters."
+  );
+
+  var hasNumbers = confirm("Click OK to confirm including numbers.");
+
+  var hasSpecialCharacters = confirm(
+    "Click OK to confirm including special characters."
+  );
 
   if (
     hasUpperCase === false &&
