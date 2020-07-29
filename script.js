@@ -132,6 +132,54 @@ function name() {
     alert("Please select at least one character type.");
     return;
   }
+  var passwordOps = {
+    length: length,
+    hasUpperCase: hasUpperCase,
+    hasLowerCase: hasLowerCase,
+    hasNumbers: hasNumbers,
+    hasSpecialCharacters: hasSpecialCharacters,
+  };
+  return passwordOps;
+}
+function pullsRandom(array) {
+  var randomIndex = Math.floor(Math.random() * array.length);
+  var randomElement = array[randomIndex];
+  return randomElement;
+}
+
+function generatePassword() {
+  var options = name();
+  var result = [];
+  var possibleChar = [];
+  var guaranteeChar = [];
+  if (options.hasUpperCase) {
+    possibleChar = possibleChar.concat(upperCase);
+    guaranteeChar.push(pullsRandom(upperCase));
+  }
+  if (options.hasLowerCase) {
+    possibleChar = possibleChar.concat(lowerCase);
+    guaranteeChar.push(pullsRandom(lowerCase));
+  }
+
+  if (options.hasNumbers) {
+    possibleChar = possibleChar.concat(numbers);
+    guaranteeChar.push(pullsRandom(numbers));
+  }
+
+  if (options.hasSpecialChar) {
+    possibleChar = possibleChar.concat(specialChar);
+    guaranteeChar.push(pullsRandom(specialChar));
+  }
+
+  for (var i = 0; i < options.length; i++) {
+    var possibleCharacter = pullsRandom(possibleChar);
+    result.push(possibleCharacter);
+  }
+
+  for (var i = 0; i < guaranteeChar.length; i++) {
+    result[i] = guaranteeChar[i];
+    return result.join("");
+  }
 }
 
 // Assignment Code
