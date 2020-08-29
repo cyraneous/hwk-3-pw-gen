@@ -12,10 +12,11 @@ Screenshots:
 
 ![Alt-text](https://github.com/cyraneous/hwk-3-pw-gen/blob/master/assets/Homework%203-1.JPG)
 
+
 ![Alt-text](https://github.com/cyraneous/hwk-3-pw-gen/blob/master/assets/Homework%203-2.JPG)
 
-![Alt-text](https://github.com/cyraneous/hwk-3-pw-gen/blob/master/assets/Homework%203-3.JPG)
 
+![Alt-text](https://github.com/cyraneous/hwk-3-pw-gen/blob/master/assets/Homework%203-3.JPG)
 
 
 License: This project is licensed under the terms of the MIT license.
